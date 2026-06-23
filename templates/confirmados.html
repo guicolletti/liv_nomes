@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirmados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🎂 Lista de Confirmados</h1>
+
+    <p class="total">
+        Total de Confirmados: {{ pessoas|length }}
+    </p>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nome</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+        {% for pessoa in pessoas %}
+
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ pessoa.nome }}</td>
+            </tr>
+
+        {% endfor %}
+
+        </tbody>
+
+    </table>
+
+</div>
+
+</body>
+</html>
